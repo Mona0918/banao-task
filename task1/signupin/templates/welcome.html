@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block body%}
+    <h1 class="text-center">Welcome {{user.username}} to Your Dashboard</h1><br><br>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-2 float-right">
+                <img src="{{user.ProfilePic.url}}" alt="error" style="width:150px;height:150px;border-radius:60px">
+            </div>
+            <div class="col-md-8">
+                <div class="col">
+                    <h4>First Name: {{user.first_name}}</h4>
+                    <h4>Last Name: {{user.last_name}}</h4>
+                    <h4>Password: {{user.ConfirmPassword}}</h4>
+                    <h4>Email ID: {{user.email}}</h4>
+                    <h4>Address: {{user.Address}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
